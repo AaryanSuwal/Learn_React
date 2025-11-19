@@ -68,4 +68,8 @@ const userDetails = {
 
 console.log(userDetails.address.temp[1]);   // Kathmandu
 
+if (userDetails.name === "Aaryan") {
+    console.log(userDetails.age);
+}
+
 
