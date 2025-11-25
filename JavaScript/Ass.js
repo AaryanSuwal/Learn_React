@@ -53,9 +53,13 @@ const SMBhaktapur = [
 
 const getUserProduct = ()=> {
 
+    // Step 1: Merge all the object
     const allUser = [...SMKathmandu, ...SMBhaktapur];
+
+    // Step 2: Filterout only the products data
     const allProducts = allUser.map((user) => user.products).flat();
 
+    // Step 3: Count each product
     const count = {};
     allProducts.forEach(p => {
         if(!count[p]) {
@@ -70,4 +74,4 @@ const getUserProduct = ()=> {
 const totalItemSold = getUserProduct();
 
 console.log("Total item sold in the supermarket are:");
-console.log(getUserProduct());
+console.log(totalItemSold);
