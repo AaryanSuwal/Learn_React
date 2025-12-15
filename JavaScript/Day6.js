@@ -21,7 +21,6 @@
 // const resultname = fName ?? "Tula";
 // console.log(resultname);
 
-
 // const object = {
 //     name: undefined,
 //     age: 10,
@@ -45,32 +44,34 @@
 // console.log(1 === 1 ? "true" : "false");
 
 const userData = [
-    {
-        id: 1,
-        name: "aashish",
-        role: "lecturer"
-    },
-    {
-        id: 2,
-        name: "gagan",
-        role: "student"
-    },
-    {
-        id: 3,
-        name: undefined,
-        role: "lecturer"
-    }
+  {
+    id: 1,
+    name: "aashish",
+    role: "lecturer",
+  },
+  {
+    id: 2,
+    name: "gagan",
+    role: "student",
+  },
+  {
+    id: 3,
+    name: undefined,
+    role: "lecturer",
+  },
 ];
 
-const roleSearch =() => {
-    const arrayLecturer = Boolean(userData.find((user) => user.role === "lecturer"));
-    let result = {};
-    if(arrayLecturer) {
-      result = userData
-        .filter((user) => user.role === "lecturer")
-        .map((user) => user.name ?? "N/A");
-    }
-    return result;
+const roleSearch = () => {
+  const arrayLecturer = Boolean(
+    userData.find((user) => user.role === "lecturer")
+  );
+  let result = {};
+  if (arrayLecturer) {
+    result = userData
+      .filter((user) => user.role === "lecturer")
+      .map((user) => user.name ?? "N/A");
+  }
+  return result;
 };
 
 console.log(roleSearch());
